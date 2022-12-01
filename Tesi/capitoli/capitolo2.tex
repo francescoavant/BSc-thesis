@@ -1,0 +1,186 @@
+\chapter{Stato dell'arte}
+\label{chap:stato_arte}
+Le applicazioni di estrazione dati nel web aumentano esponenzialmente con il valore delle informazioni. La vasta eterogeneit\`a consente lo sviluppo e lo svolgimento di quest`attivit\`a in ambiti differenti. 
+
+Ad oggi, porre come obiettivo di scraping un social network vuol dire catalogare e gestire enormi quantit\`a di dati. La presenza di interesse delle societ\`a e delle community open source al tema dello scraping dei social, individua l'importanza delle informazioni memorizzate su questi servizi e la conseguente protezione degli stessi da parte dei gestori delle piattaforme. 
+
+Con la presenza di regolamentazioni e leggi a carattere statale ed internazionale si nota come i gestori dei servizi siano stati nel tempo obbligati a cambiare l'approccio nei confronti della gestione dei dati pubblici. Inoltre, la dichiarazione di particolari termini d'uso delle piattaforme, garantisce un'apparente protezione dell'utente nei confronti dell'utilizzo dei dati per scopi non previsti.
+
+Nel seguente capitolo si presenter\`a lo stato dell'arte del web scraping, con particolare attenzione ai social network.
+\newpage
+\section{Web Scraping}
+Con il termine ``web scraping'' si fa riferimento all'attivit\`a di raccolta automatica di informazioni da Internet inglobando sia varie tecniche di programmazione che diverse tecnologie web.
+Solitamente l'acquisizione di dati da un servizio avviene attraverso le Application Programming Interface (paragrafo \ref{API}) messe a disposizione dallo stesso, in grado di fornire output formattati e standardizzati (es. JSON), pronti ad essere analizzati.\cite{mitchell2018web}
+
+Nel campo della ricerca ed estrazione dei dati su internet, \`e necessario prendere in considerazione anche l'esistenza dell'attivit\`a nota come ``web crawling''. Il web crawling, a differenza dello scraping, viene impiegato per l'analisi e l'indicizzazione dei siti web ed utilizzato da parte dei motori di ricerca per fornire i risultati basati sulle parole chiave richieste dagli utenti. L'applicazione in grado di effettuare l'attivit\`a di crawling \`e definita ``web crawler'', nota anche come ``spider'' o ``robot''.\cite{olston2010web}
+
+L'ingente quantit\`a di dati eterogenei presenti in Internet implica un maggiore interesse nello sviluppo di sistemi automatizzati di raccolta di informazioni. La possibilit\`a di estrapolazione ed analisi dati forniscono degli strumenti di lavoro applicabili in molti settori della societ\`a moderna. Si pensi ad esempio alla possibilit\`a di impiego dei dati per analisi statistiche, per marketing, per pubblicit\`a e per ricerche in genere.
+
+La fruizione di dati relativi a singole persone, societ\`a, attivit\`a commerciali, contribuiscono alla alimentazione di sistemi di Big Data Analytics. Questi ultimi sono in grado di proporre strumenti di predizione ed analisi in chiave investigativa e di accelerare l'attivit\`a di Intelligence (nel particolare Virtual Intelligence).
+
+Lo sviluppo di sistemi con un'operativit\`a temporale continua, crea conseguentemente un'attenta risposta di contrasto.
+Ci\`o accade in quanto molto spesso l'impiego dell'attivit\`a di scraping avviene con fini malevoli e quindi considerata come ``furto di dati''. 
+In particolare queste operazioni vengono esplicitamente proibite dai ToS \footnote{Terms of service} (termini di servizio) delle piattaforme web, soprattutto per ragioni di sicurezza delle informazioni e protezione dei dati pubblicati.
+
+L'impiego di bot e botnet in grado di simulare e mascherare le operazioni automatizzate facendole apparire ``umane'', rappresenta la principale metodologia per lo scraping su larga scala. Precisamente l'avvio di un sistema distribuito avente pi\`u macchine con lo stesso obiettivo, permette di eludere agevolmente tutti gli eventuali controlli messi in atto dal fornitore dei servizi web per la protezione dei dati pubblicati. 
+
+La variet\`a di soluzioni di scraping attuabili presenta punti di forza per la gestione di operazioni massive. Diversificando metodologie di estrazione, i bot possono agire contemporaneamente e svolgere attivit\`a specifiche e diversificate, a seconda del target individuato.
+
+Un esempio di raccolta dati automatica viene rappresentato dalla generazione e messa in campo di sistemi e strumenti di automazione dei browser. Questi sono in grado, anche visivamente, di simulare la normale attivit\`a di un utente sul web, premendo pulsanti, caricando siti internet e procedendo all'inserimento di input, oltre che ovviamente, al download delle informazioni di interesse. 
+%aggiungere altro ...
+
+
+\begin{figure}[!htb]
+  \begin{center}
+  \includesvg[width=400pt]{immagini/scraper.svg}
+  \caption{Schema di Web Scraping}
+\end{center}
+\end{figure}
+%grafico generale funzionamento scraping dal web
+
+
+\subsection{L'estrazione dei dati dai Social Network} \label{dati_social}
+L'attivit\`a di scraping trova come importante campo d'applicazione i social network. Ad oggi, il vasto utilizzo di questi servizi porta alla registrazione di una moltitudine di dati diversi, caratterizzati dall'associazione degli stessi ad i singoli utenti. L'analisi della rete sociale di una persona, consente l'aggregazione dei dati e la sua conseguente profilazione.
+L'etereogeneit\`a dei dati rappresenta il punto iniziale per la catalogazione delle informazioni provenienti dalle piattaforme social. Il valore dei social network \`e direttamente proporzionale alla quantit\`a di dati presenti.
+
+L'attivit\`a denominata come ``social engagement'' ovvero il coinvolgimento degli utenti, fornisce un valido fattore di analisi sul comportamento che la singola persona attua di fronte ad un certo tipo di contenuto. Lo studio di queste informazioni garantisce una attenta profilazione dell'utente, molte volte inconsapevole della quantit\`a di dati pubblici rilasciati dalla sua attivit\`a sui social.
+
+Ogni piattaforma social a disposizione del pubblico adotta policy differenti riguardo alla estrazione dei dati. In particolare se da un lato vengono fornite Application Programming Interface appositamente sviluppate per la fruizione pi\`u semplice delle informazioni da parte degli sviluppatori, dall'altro si ha l'adozione di politiche restrittive, con API molto limitate ed un netto contrasto ai tentativi di estrapolazione dei dati. 
+Negli ultimi anni, a seguito di clamorose notizie riguardanti l'utilizzo dei dati a discapito della privacy degli utenti, \`e diventato comune da parte delle piattaforme social l'introduzione di forti restrizioni sull'attivit\`a di scraping, attuando un vero e proprio contrasto a questo tipo di attivit\`a.
+
+La presenza di un numero cos\`i grande di PII\footnote{Personally identifiable information}, ovvero qualsiasi rappresentazione di informazioni in grado di consentire l'identificazione di un individuo, ha generato maggiore attenzione sulla privatezza delle informazioni pubblicate dagli utenti, a tutela dei loro dati.\cite{isaak2018user}
+
+L'identificazione di metriche idonee per lo sviluppo e l'analisi dei dati pubblicati si pu\`o classificare a seconda degli obiettivi di ricerca: 
+\begin{itemize}
+    \item \textbf{Volume dei dati}: un profilo con una grande influenza sul web pu\`o contenere fino a migliaia di contenuti di interesse operativo.
+    \item \textbf{Testi}: i testi contenuti all'interno di post o all'interno di foto e video possono descrivere pensieri e sentimenti dell'utente.
+    \item \textbf{Media}: le foto e i video pubblicati rappresentano un elemento fondamentale per l'analisi e la profilazione. L'eventuale presenza di luoghi o altre persone nei media garantisce una maggiore quantit\`a di informazioni da immagazzinare ed analizzare.
+    \item \textbf{Individui coinvolti}: l'azione del ``tag'' su una foto, video o su un post composto da solo testo, consente di ampliare la conoscenza su un utente, azionando il recupero delle informazioni anche su eventuali altri individui coinvolti.
+    \item \textbf{Reazioni e commenti}: contribuiscono ad interpretare la diffusione di un messaggio o ideale propagato sul social network. Un alto numero \`e direttamente proporzionale all'interesse generato dal contenuto.
+    \item \textbf{Geolocalizzazione}: la condivisione della posizione, correlata dalla specifica data ed ora, consente di identificare gli spostamenti o gli interessi di un utente, aumentando la precisione della sua eventuale profilazione.
+    \item \textbf{Date e tempo}: l'estrazione di informazioni in un certo arco temporale d'interesse o la redazione di una totale cronostoria del profilo social favorisce l'individuazione di informazioni relative ad uno specifico periodo.
+    \item \textbf{Rete sociale}: l'insieme degli amici o dei follower e dei seguiti, rappresenta la rete sociale dell'utente e gli eventuali interessi.
+    \item \textbf{Gruppi di utenti}: la partecipazione a gruppi privati o pubblici presenta informazioni aggiuntive sull'individuo.
+    \item \textbf{Pagine}: interesse verso pagine pubbliche di diversa tipologia (ad esempio notizie o brand).
+    \item \textbf{Eventi}: partecipazione a manifestazioni, interesse nei confronti di eventi pubblici.
+    
+\end{itemize}
+L'interpretazione di questi fattori, sia singolarmente che in gruppo individuano le informazioni di interesse per chi analizza i dati. Un numero maggiore di aggregazioni e correlazioni dei dati, genera una profilazione dell'utente pi\`u precisa ed utile.
+\begin{figure}[!htb]
+  \begin{center}
+  \includesvg[width=400pt]{immagini/schema_social.svg}
+  \caption{Schema di funzionamento di un sistema ideale di ricerca analisi ed estrazione dei dati da social network}
+\end{center}
+\end{figure}
+
+
+\subsection{Casi reali} \label{casi_reali}
+Un esempio di notizia nota al pubblico per la forte influenza mediatica \`e il caso di Cambridge Analytica e Facebook. All'inizio dell'anno 2018 fu rivelato che la societ\`a Cambridge Analytica aveva effettuato una massiva raccolta di dati (circa 87 milioni di account del social Facebook) con conseguente profilazione degli utenti ed impiegato i risultati per attivit\`a di propaganda politica.
+La profilazione degli utenti avveniva attraverso l'utilizzo, da parte degli stessi, di un'app di ``quiz sulla personalit\`a'', tramite la quale ciascun fruitore dava il consenso all'accesso ai dati del profilo.
+
+La profilazione avveniva secondo un modello denominato OCEAN\footnote{Anche denominata Teoria dei Big Five, \`e una tassonomia dei tratti di personalit\`a}: Openness (franchezza, apertura sociale), Conscientiousness (coscienziosit\`a), Extraversion (estroversione), Agreeableness (gradevolezza, amicalit\`a), Neuroticism (nevroticismo). 
+Dal caso ne \`e derivata la chiusura dell'azienda per bancarotta, senza risvolti legali.\cite{tirino2019cambridge}
+
+Un altro caso di impiego attivo di web scraping \`e il software sviluppato dall'azienda americana Clearview AI. Il prodotto consente l'identificazione delle persona tramite l'intelligenza artificiale, sfruttando database composti anche da informazioni e foto estratte dai social network. Negli anni, i maggiori social hanno richiesto l'eliminazione dei dati estratti dalla societ\`a, anche se quest'ultima ha sempre dichiarato che l'impiego del progetto sia dedicato alle forze dell'ordine. 
+
+In Italia il Garante per la protezione dei dati personali, ha emesso in data 9 febbraio 2022 un'ordinanza di ingiunzione contro l'utilizzo di dati estratti da fonti pubbliche inerenti a cittadini italiani, sanzionando la societ\`a e vietandone la sua attivit\`a nello Stato Italiano. \footnote{\url{https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/9751362}}
+
+Altre implicazione legali sono state causate dal caso di Linkedin ed hiQ Labs. Nel particolare quest'ultima attuava soluzioni di web scraping sulla piattaforma Linkedin, raccogliendo informazioni sui profili registrati al servizio. La corte d'appello degli Stati Uniti ha dato ragione all'azienda hiQ Labs ritenendo che l'estrazione di dati pubblici non sia illegale. Di contro, Linkedin contrastava la decisione affermando la necessit\`a di autorizzazioni per l'attivit\`a di scraping sulla loro piattaforma.
+%aggiungere casi?
+
+Le problematiche evidenziate dai casi descritti, hanno fatto s\`i che da parte delle piattaforme social, ci sia stato un conseguente forte incremento di soluzioni di sicurezza e contrasto al recupero ed estrazione dei dati non autorizzata.
+
+
+
+\subsection{Metodologie di contrasto allo scraping} \label{metodi_contrasto}
+Attualmente, anche se con modalit\`a differenti, ogni social adotta politiche di contrasto, ponendo come fulcro dell'attivit\`a la protezione dei dati personali dei propri utenti.
+La mitigazione del web scraping adottata dai social network individua delle tecniche con caratteristiche comuni:
+\begin{itemize}
+    \item \textbf{Autenticazione ed accesso}: uno dei principali strumenti di deterrenza nei confronti dell'automazione dell'estrazione dei dati \`e l'obbligatoriet\`a di iscrizione al sito web ed il conseguente login.
+    \item \textbf{Ban}: attuazione di politiche di divieto d'accesso per dispositivi ed utenze identificate come ``malevoli'' e non rispettanti i termini di servizio. Il possibile ban si distingue in ``soft-ban'' e ``permanent-ban'', a seconda delle policy di contrasto del servizio. Per soft-ban si fa riferimento ad un divieto di durata limitata nel tempo, solitamente definibile in ore o giorni, mentre per permanent-ban si intende un divieto assoluto e permanente all'accesso da parte di un determinato utente.
+    \item \textbf{Robots Exclusion Standard}: rappresenta un protocollo di comunicazione tra i siti internet ed i web crawler. Il metodo esclude i robot dall'accesso al sito attraverso l'espressione di politiche d'acesso (access policy) all'interno di un file denominato ``robots.txt'' ed accessibile sul server. Il file \`e caratterizzato da pi\`u record composti dalla descrizione dello ``User Agent'' e dalla regola ``Disallow'' (lett. ``non consentire'')\footnote{\url{https://www.robotstxt.org/orig.html}}.
+    
+    Si riporta un esempio estratto dal file robots di Facebook\footnote{\url{https://www.facebook.com/robots.txt}}:
+    \inputminted[bgcolor=bg]{text}{codice/robots.txt}
+    \item \textbf{Limitazione delle API}: le API messe a disposizione per gli  sviluppatori presentano limitazioni sulla quantit\`a dei dati estraibili, non consentendo uno scraping completo o massivo.
+    \item \textbf{Limitazione delle richieste}: le richieste provenienti da uno stesso dispositivo ed in un ristretto periodo temporale vengono attenzionate ed impedite. L'analisi automatica del numero di richieste consente di gestire in modo meccanico i processi di ban.
+    \item \textbf{Controllo indirizzi IP}: controllo sulla provenienza della richiesta. Viene effettuato un controllo sulle richieste provenienti dallo stesso indirizzo IP (o pool di indirizzi IP), iscrivendolo eventualmente in blacklist e bloccando la sua attivit\`a. Ci\`o pu\`o avvenire sia relativamente ai singoli IP, sia alla provenienza da regioni geografiche simili o vicine.
+    \item \textbf{Browser fingerprinting}: analisi remota delle informazioni di un dispositivo. Le informazioni del client ricavabili con questa tecnica indicano il browser utilizzato (con versione e personalizzazioni), sistema operativo e applicazioni, hardware e network.\cite{nikiforakis2013cookieless}
+    \item \textbf{Identificatori pseudoanonimi}: l'attivit\`a di scraping si avvale dell'estrazione diretta dei dati a partire da un link, molte volte statico. Per evitare ci\`o viene prevista la presenza di ID pseudoanonimi\footnote{Si identificano come informazioni non completamente anonime} random generati a partire dall'ID fisso ed il timestamp\footnote{Anche denominata marca temporale, \`e una sequenza di caratteri che rappresentano una data e un orario ed in grado di accertare l'avvenimento di un evento}. Questo previene l'attivit\`a dei tool che sfruttano la staticit\`a dei link per avviare le operazioni di GET. 
+    \item \textbf{Identificazione ``umana''}: alcuni social network per evitare che venga effettuato un login automatico da parte di bot, obbligano  all'identificazione di una persona reale, attraverso una foto da scattare sul momento.
+    \item \textbf{Aggiornamenti}: continuo sviluppo di metodi di contrasto allo scraping. Creazione di team di sviluppo appositamente dedicati a questa funzione.
+\end{itemize}
+L'elenco delle attivit\`a sopra descritte rappresenta una sola parte dei provvedimenti che ad oggi vengono adottati per contrastare l'automazione nella raccolta dei dati. \`E importante rendere noto che per la maggior parte dei servizi web, la risposta allo scraping non implica solo una delle soluzioni descritte bens\`i l'insieme di almeno due o pi\`u ``ostacoli'' di tipo tecnico.
+\section{L'utilizzo dei dati}
+\subsection{Open Source Intelligence} \label{OSINT}
+L'OSINT \cite{intelligence_guida} (Open source intelligence) rappresenta il ramo dell'intelligence che si occupa della ricerca e catalogazione delle informazioni da fonti aperte. Per fonti aperte si intendono i media, i dati pubblici ed i dati accademici. Questo tipo di attivit\`a sviluppa come vantaggio l'accessibilit\`a delle informazioni, le quali essendo pubbliche, risultano facilmente reperibili; mentre la quantit\`a di dati da gestire rappresenta il principale problema di questa tecnica.
+L'applicazione dell'attivit\`a di intelligence su piattaforme social network prende il nome di ``Social media intelligence''.
+\cite{gnosis_int}.
+
+L'etereogeneit\`a dei dati pubblicati da un utente sulle piattaforme social, consente all'analista d'intelligence lo sviluppo di schemi di analisi comportamentali e sociali. La presenza di dati temporanei (``a scadenza''), come ad esempio le storie, fornisce informazioni in tempo reale sull'attivit\`a di un soggetto sottoposto a controllo.
+Il tracciamento e la profilazione di un individuo si completa grazie ad informazioni che esso stessa pubblica come la geolocalizzazione, la sua rete sociale, i post e i media, le reazioni ed i commenti, oltre che agli interessi personali espressi tramite i ``mi piace'' e la sua attivit\`a nel complesso.
+\`E importante fare presente che la principale fonte dell'OSINT non \`e rappresentata dal Worldwide Web ma dal Deep Web, ovvero la porzione di web non indicizzata dai motori di ricerca.
+\subsection{Scenari d'impiego}
+I dati raw, ``grezzi'', estratti dalle fonti pubbliche, una volta sottoposti ad ingestione in sistemi di Big Data Analytics e processati, possono essere analizzati tramite tecniche di Sentiment Analysis\footnote{Elaborazione del linguaggio naturale per l'estrazione di opinioni e sentimenti.}.
+I dati prodotti, descritti al Paragrafo \ref{dati_social}, possono essere impiegati in molteplici attivit\`a come:
+\begin{itemize}
+    \item \textbf{Contrasto a radicalizzazione e terrorismo online}: le policy dei social network vietano la pubblicazione di contenuti relativi ad organizzazione terroristiche o a relative radicalizzazioni e di contenuti violenti, attuando, anche tramite lo strumento della segnalazione, l'eliminazione di questi dati. Ci\`o non avviene sempre in maniera immediata o corretta e per questo motivo, garantire un'estrazione dati continua e performante consentirebbe di ricavare informazioni che in futuro saranno sottoposte a controllo ed eliminazione.
+    L'impiego da parte di gruppi sovversivi di piattaforme web di interazione sociale, facilita anche il processo di reclutamento, promuovendo ideali ed azioni in contrasto con la societ\`a moderna.
+    Ci\`o consente la decentralizzazione dell'organizzazione, generando un'engagement\footnote{Coinvolgimento, impegno} transnazionale, ampliandosi facilmente e di diffondendo la dottrina e le strategie sovvertitrici. \cite{lesser1999countering}
+    Garantire uno strumento operativo in grado di ``intercettare'', prevedere e consultare informazioni relative a probabili associazioni di tipo terroristico pu\`o rappresentare un valore aggiunto per le agenzie internazionali e i reparti delle Forze dell'Ordine che si occupano di queste tematiche.
+    \item \textbf{Investigazione}: come introdotto al Paragrafo \ref{OSINT}, i dati pubblici rappresentano la chiave di successo in un'attivit\`a di Open Source Intelligence. I dati eterogenei provenienti da uno specifico utente permettono la correlazione con casi di studio in fasi investigative. La quantit\`a di informazioni presenti consente una maggiore attivit\`a d'indagine in grado di fornire strumenti a supporto delle operazioni. 
+    \item \textbf{Ricerca}: l'analisi dei dati consente di affinare metodologie di ricerca ed interpretazione delle relazioni sociali e delle informazioni condivise pubblicamente. La ripetizione di azioni e la maggiore frequenza di condivisioni di determinate comunicazioni garantiscono il maggiore coinvolgimento del pubblico, inteso come rete sociale di un utente.  
+    \item \textbf{Strumenti di supporto}: la creazione di strumenti a supporto delle tematiche sopra riportate possono generare una soluzione per le attivit\`a delle Agenzie di Sicurezza a livello internazionale, che si occupano della catalogazione ed analisi dei dati per diversi scopi. 
+\end{itemize}
+\section{Privacy e dati pubblici}
+\subsection{Aspetti legali}
+La legalit\`a dell'attivit\`a di web scraping \`e un aspetto controverso e citato in diversi casi reali, come proposto al Paragrafo \ref{casi_reali}. 
+
+Il caso rientra in una ``zona grigia'' in ambito giuridico, in quanto la fattispecie non \`e espressamente definita da nessuna norma.\cite{krotov2018legality}
+L'attivit\`a risulta essere trasversale ad una serie di teorie legali, leggi internazionali e di comune applicazione come:
+\begin{itemize}
+    \item \textbf{Termini di utilizzo}: descrivono le condizioni di utilizzo e le relative attivit\`a vietate dalla piattaforma che ospita i dati, attuando soluzioni tecniche di contrasto, come riportato al Paragrafo \ref{metodi_contrasto}. L'accettazione dei termini di utilizzo di un servizio web \`e comunemente obbligatoria per l'accesso allo stesso. 
+    \item \textbf{Copyright}: estrarre gli elementi coperti da copyright e ripubblicarli viola le fattispecie identificate dall'istituto giuridico della tutela di un'opera. A seconda del paese, l'attivit\`a ricade in legislazioni differenti. 
+    \item \textbf{Danneggiamento}: l'impiego di tool con operativit\`a continua ed in grado di effettuare azioni massive pu\`o portare al danneggiamento del server su cui si opera. Anche in questo caso, a seconda del paese, la fattispecie viene identificata in regolamenti differenti. Ad esempio in Italia, l'azione pu\`o ricadere nell'Art.635 bis del Codice Penale, ovvero ``Danneggiamento di informazioni, dati e programmi informatici''. 
+    \item \textbf{Scopo dell'attivit\`a}: in generale ogni impiego non legale o fraudolento dei dati ricavati \`e punito da diverse leggi a livello internazionale. Ad esempio negli Stati Uniti, secondo il Computer Fraud and Abuse Act\footnote{CFAA, Computer Fraud and Abuse Act, 1986, legge federale degli Stati Uniti d'America}, l'attivit\`a di recupero di dati pubblici (web scraping in generale) \`e ritenuta legale, ma \`e punito l'impiego di dati per scopi non autorizzati.
+\end{itemize}
+In Europa, la presenza del GDPR (General Data Protection Regulation)\cite{GDPR} e di vari casi di applicazione recenti, definiscono una direzione univoca nei confronti del trattamento dei dati non autorizzato, come accade nel web scraping.
+Si riportano le definizioni di interesse espresse nel testo del Regolamento UE:
+\begin{center}
+\textbf{Art.4 comma 1}\\
+\textit{``«dato personale»: qualsiasi informazione riguardante una persona fisica identificata o
+identificabile («interessato»); si considera identificabile la persona fisica che può essere
+identificata, direttamente o indirettamente, con particolare riferimento a un identificativo come il
+nome, un numero di identificazione, dati relativi all'ubicazione, un identificativo online o a uno o
+più elementi caratteristici della sua identità fisica, fisiologica, genetica, psichica, economica,
+culturale o sociale.''}\\
+\newpage
+\textbf{Art.4 comma 2 }\\
+\textit{``«trattamento»: qualsiasi operazione o insieme di operazioni, compiute con o senza l'ausilio di
+processi automatizzati e applicate a dati personali o insiemi di dati personali, come la raccolta, la
+registrazione, l'organizzazione, la strutturazione, la conservazione, l'adattamento o la modifica,
+l'estrazione, la consultazione, l'uso, la comunicazione mediante trasmissione, diffusione o qualsiasi
+altra forma di messa a disposizione, il raffronto o l'interconnessione, la limitazione, la cancellazione
+o la distruzione.''}\\
+
+\textbf{Art.4 comma 4}\\
+\textit{``«profilazione»: qualsiasi forma di trattamento automatizzato di dati personali consistente
+nell'utilizzo di tali dati personali per valutare determinati aspetti personali relativi a una persona
+fisica, in particolare per analizzare o prevedere aspetti riguardanti il rendimento professionale, la
+situazione economica, la salute, le preferenze personali, gli interessi, l'affidabilità, il
+comportamento, l'ubicazione o gli spostamenti di detta persona fisica.''}
+\end{center}
+
+Gli articoli riportati, individuano gli aspetti legali in cui si incorre utilizzando e  sviluppando strumenti di scraping. A partire dal trattamento in genere, fino alla profilazione, l'attivit\`a potrebbe incorrere in casi legali qualora non sia esplicitamente consentita dal proprietario dei dati estratti o da chi ne ha la responsabilit\`a. 
+
+Particolare attenzione viene posta da parte del GDPR, ove all'articolo 6, viene prevista la liceit\`a del trattamento in determinati e specifici casi. \\
+\`E importante fare presente che in Italia esiste una fattispecie di reato denominata ``Comunicazione e diffusione illecita di dati personali oggetto di trattamento su larga scala'' (art. 167-bis Codice della Privacy, D.lgs. 30 giugno 2003, n. 196) facente riferimento all'utilizzo dei dati ``su larga scala'', come pu\`o esserlo tramite l'attivit\`a di web scraping massiva.\\
+Si riporta il testo dell'articolo.\\
+\newpage
+
+\begin{center}
+    \textbf{Art.167-bis Codice della Privacy}\\
+\textit{\textbf{Comma 1.} Salvo che il fatto costituisca più grave reato, chiunque comunica o diffonde al fine di trarre profitto per se' o altri ovvero al fine di arrecare danno, un archivio automatizzato o una parte sostanziale di esso contenente dati personali oggetto di trattamento su larga scala, in violazione degli articoli 2 ter, 2 sexies e 2 octies, è punito con la reclusione da uno a sei anni.\\
+\textbf{Comma 2.} Salvo che il fatto costituisca più grave reato, chiunque, al fine trarne profitto per sé o altri ovvero di arrecare danno, comunica o diffonde, senza consenso, un archivio automatizzato o una parte sostanziale di esso contenente dati personali oggetto di trattamento su larga scala, è punito con la reclusione da uno a sei anni, quando il consenso dell'interessato è richiesto per le operazioni di comunicazione e di diffusione.}
+\end{center}
+L'applicazione della disciplina di protezione dei dati viene esclusa nel caso di trattamento dati per motivi di giustizia, di sicurezza e per finalità di prevenzione e repressione dei reati.

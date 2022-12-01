@@ -1,0 +1,19 @@
+
+@api.route('/<username>/posts')  
+#download user's post
+class UserPost(Resource):
+    def get(UserPost,username):
+         name=username
+         posts = dl_posts(name)
+         print(posts)
+         Path(name).mkdir(parents=True, exist_ok=True)
+         usernamepost= name+"_posts.json"
+         with open(name+"/"+usernamepost, "w") as f:
+            f.write(json.dumps(posts, default=str,indent=4))
+         download().dl_images(quality=download.LOW_QUALITY_KEY,
+         posts=posts,name=name)
+         download().dl_images(quality=download.HIGH_QUALITY_KEY,
+         posts=posts,name=name)
+         download().dl_video(name=name, posts=posts)
+         download().create_archive()
+         return json.dumps(posts, default=str, indent=4)

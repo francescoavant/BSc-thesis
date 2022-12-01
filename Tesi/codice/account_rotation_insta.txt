@@ -1,0 +1,13 @@
+class account:
+    def rotate_accounts(read_from_file= True):
+        if read_from_file:
+            with open('accounts.json') as f:
+                accounts = json.load(f)
+                count=0
+            for account in accounts:
+                count+=1
+            num=randrange(count+1)
+            print('Using account num:',num+1)
+            user= accounts[num]['user']
+            passw= accounts[num]['pass']
+            return user, passw

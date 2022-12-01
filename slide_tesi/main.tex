@@ -1,0 +1,44 @@
+\documentclass{beamer}
+\usetheme{Boadilla}
+\usecolortheme{whale}
+\usefonttheme{default}
+\usepackage{svg}
+\usepackage{lipsum}
+\usepackage{graphicx,xcolor}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{pgfplots}
+\usepackage{tikz}
+
+\newsavebox{\authbox}
+\sbox{\authbox}{%
+\centering
+\begin{minipage}{0.45\linewidth}
+\centering\normalsize
+Relatore: \par
+Prof. Marco Anisetti
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\linewidth}
+\centering\normalsize
+Tesi di Laurea di:\par
+Francesco Avantaggiato
+\end{minipage}
+}
+
+\titlegraphic{\includegraphics[width=1.8cm]{images/unimi.pdf}}
+
+\title[]{Studio e sviluppo di connettori di scraping di sorgenti social network per ingestione in sistemi di Big Data Analytics}
+\author[Francesco Avantaggiato]{%
+\usebox{\authbox}
+}
+
+\institute[]{Universit\`a degli Studi di Milano\\Sicurezza dei Sistemi e delle Reti Informatiche}
+\date{15 Dicembre 2022}
+
+\pgfplotsset{compat=1.18}
+\begin{document}
+
+\frame{\titlepage}
+\input{content}
+
+\end{document}

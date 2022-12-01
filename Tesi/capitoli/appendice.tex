@@ -1,0 +1,37 @@
+\appendix 
+\chapter{Estratti di codice}\label{appendice}
+In questa appendice sono inserite parti di codice del progetto di tesi.
+Per motivi di privacy, di formattazione e di grafica sono stati rimossi e modificati alcuni elementi dai file riportati. 
+\section{Connettore di Facebook}\label{app:fb_codice}
+\subsection{Flask API}\label{flask_code}
+Si riporta il codice dal ``main'' del progetto per Facebook, dove si instanzia Flak e si genera la API con le conseguenti ``route'' (esempio da ``profile.py'') per raggiungere le varie risorse. 
+
+\inputminted[bgcolor=bg]{python}{codice/flask_fb.txt}
+
+\inputminted[bgcolor=bg]{python}{codice/flask_route.txt}
+
+\subsection{Funzioni di scraping} \label{scraping_funzioni}
+Scraping di profili e download dei relativi media.
+\inputminted[bgcolor=bg]{python}{codice/user_posts_fb.txt}
+\subsection{Docker}\label{dockerfile}
+Si riporta il Dockerfile per la generazione dell'immagine Docker.
+\inputminted[bgcolor=bg]{docker}{codice/dockerfile.txt}
+\subsection{Cookie} \label{cookie_code}
+Si riporta il codice relativo all'impiego di Selenium per l'estrazione dei cookie dal login in Facebook.
+\inputminted[bgcolor=bg]{python}{codice/create_cookie.txt}
+
+L'output in JSON dei valori estratti dai cookie da Selenium all'atto del login \`e composto da due valori necessari per il funzionamento del tool: il valore denominato ``c\_user'' rappresenta l'identificativo univoco dell'account, mentre il valore ``xs'' rappresenta l'identificativo univoco della sessione di login.
+\inputminted[bgcolor=bg]{json}{codice/cookie_ex.json}
+
+\subsection{Output in JSON} \label{json_output_fb}
+Si riporta un esempio di output in JSON dei dati estratti da una richiesta di scraping per informazioni generali di un profilo.
+\inputminted[bgcolor=bg]{json}{codice/esempio_fb.json}
+
+\section{Connettore di Instagram}\label{app:insta_codice}
+\subsection{Funzioni di scraping}\label{scraping_funzioni_insta}
+Scraping di profili e e download dei relativi media.
+\inputminted[bgcolor=bg]{python}{codice/funzioni_scraping_insta.txt}
+
+\subsection{Output in JSON}
+Si riporta un esempio di file JSON estratto da un profilo ed inerente ad un singolo post.
+\inputminted[bgcolor=bg]{json}{codice/output_insta.txt}

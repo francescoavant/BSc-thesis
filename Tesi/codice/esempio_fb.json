@@ -1,0 +1,46 @@
+{
+    "Friend_count": 821,
+    "Follower_count": null,
+    "Following_count": 292,
+    "cover_photo_text": "Cover Photo: Paolo Verdi's photo.",
+    "cover_photo": "https://scontent.fmxp7-1.fna.fbcdn.net/",
+    "profile_picture": "https://scontent.fmxp7-1.fna.fbcdn.net/",
+    "id": "100003940579155",
+    "Name": "Paolo Verdi",
+    "Education": {
+        "University": "Dipartimento di informatica ",
+        "High school": "Liceo Scientifico"
+    },
+    "Places lived": [
+        {
+            "link": "//profile.php?id=123456",
+            "text": "Roma",
+            "type": "Current city"
+        },
+        {
+            "link": "/profile.php?id=123456",
+            "text": "Roma",
+            "type": "Hometown"
+        }
+    ],
+    "Contact info": "/paoloverdi\nFacebook",
+    "Basic info": "Male\nGender",
+    "Life events": "",
+    "Friends": [
+        {
+            "id": 100000000000006,
+            "link": "/username",
+            "name": "Luigi Bianchi",
+            "profile_picture": "https://...",
+            "tagline": "Milan, Italy"
+        },
+        {
+            "id": 100000000000000,
+            "link": "/username",
+            "name": "Mario Rossi",
+            "profile_picture": "https://...",
+            "tagline": "Rome, Italy"
+        },
+        {...}
+    ]
+}

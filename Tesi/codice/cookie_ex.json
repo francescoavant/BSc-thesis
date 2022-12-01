@@ -1,0 +1,22 @@
+[
+    {
+        "domain": ".facebook.com",
+        "expiry": 1697301133,
+        "httpOnly": false,
+        "name": "c_user",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "123456789"
+    },
+    {
+        "domain": ".facebook.com",
+        "expiry": 1697301133,
+        "httpOnly": true,
+        "name": "xs",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "njdbjbvbjabfiu324%%638914uh'?rtf"
+    }
+]

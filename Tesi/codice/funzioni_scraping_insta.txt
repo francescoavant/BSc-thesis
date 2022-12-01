@@ -1,0 +1,35 @@
+class profile_dl(Resource): 
+    def get(self, username):
+        L=login.login()
+        MyRateController(instaloader.RateController)
+        id = str(uuid.uuid4())
+        posts = instaloader.Profile.from_username(L.context,
+        username).get_posts()
+        for post in posts:
+            print(post.date)
+            L.dirname_pattern = './'+id+'/posts'
+            L.download_post(post, username) 
+        shutil.make_archive(id, 'zip', id)
+        shutil.rmtree(id)
+
+class stories_dl(Resource):
+    def get(self, username):
+        L=login.login()
+        id = str(uuid.uuid4())
+        MyRateController(instaloader.RateController)
+        choices = {'stories': True,
+                'posts': False,
+                'profile_pic': True,
+                'raise_errors': True}
+        profile = instaloader.Profile.from_username(L.context,
+        username)
+        profiles = {profile}
+        L.save_metadata = False
+        L.dirname_pattern = './'+id+'/stories'
+        L.compress_json = False
+        L.post_metadata_txt_pattern = ''
+        L.storyitem_metadata_txt_pattern = ''
+        L.download_profiles(profiles, **choices)
+        shutil.make_archive(id, 'zip', id) 
+        shutil.rmtree(id)class profile_dl(Resource):
+   

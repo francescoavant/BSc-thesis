@@ -1,0 +1,10 @@
+def rotatecookie(self, read_from_file= True):
+                if read_from_file:
+                        with open('accounts.json') as f:
+                                accounts = json.load(f)
+                count=0
+                for account in accounts:
+                        count+=1
+                num=randrange(count)
+                print("using cookies num", num+1)
+        return set_cookies('./cookies/cookie'+str(num+1)+'.json') 

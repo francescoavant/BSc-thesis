@@ -1,0 +1,99 @@
+\usepackage{amsmath} 
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{breqn}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{soul}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{authblk}
+\usepackage[font={bf},labelfont={bf}]{caption}
+\usepackage{array}
+\usepackage{natbib}
+\usepackage[a-1a]{pdfx}
+\bibliographystyle{apalike}
+\RequirePackage{etoolbox}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=blue,
+    citecolor=black,
+    pdftitle={Studio e sviluppo di connettori di scraping di sorgenti social network per ingestione in sistemi di Big Data Analytics},
+    %pdfpagemode=FullScreen,
+    }
+
+\makeatletter
+
+\patchcmd{\NAT@citex}
+  {\@citea\NAT@hyper@{%
+     \NAT@nmfmt{\NAT@nm}%
+     \hyper@natlinkbreak{\NAT@aysep\NAT@spacechar}{\@citeb\@extra@b@citeb}%
+     \NAT@date}}
+  {\@citea\NAT@nmfmt{\NAT@nm}%
+   \NAT@aysep\NAT@spacechar\NAT@hyper@{\NAT@date}}{}{}
+
+
+\patchcmd{\NAT@citex}
+  {\@citea\NAT@hyper@{%
+     \NAT@nmfmt{\NAT@nm}%
+     \hyper@natlinkbreak{\NAT@spacechar\NAT@@open\if*#1*\else#1\NAT@spacechar\fi}%
+       {\@citeb\@extra@b@citeb}%
+     \NAT@date}}
+  {\@citea\NAT@nmfmt{\NAT@nm}%
+   \NAT@spacechar\NAT@@open\if*#1*\else#1\NAT@spacechar\fi\NAT@hyper@{\NAT@date}}{}{}
+\makeatother    
+
+
+%TITLE FIELD LINKS
+\DeclareRobustCommand*\authorID[1]{\gdef\@authorID{By: \href{ocean-cfd.engr.tamu.edu/members\##1}{\@author}}}
+\DeclareRobustCommand*\documentID[1]{\gdef\@documentID{}}
+\DeclareRobustCommand*\fileInclude[1]{\gdef\@fileInclude{#1}}
+
+
+\newcommand\mainflexsplit{}
+\newcommand\secondaryflexsplit{}
+
+\usepackage{letltxmacro}
+\LetLtxMacro{\originaleqref}{\eqref}
+\renewcommand{\eqref}{Eq.~\originaleqref}
+\newcommand\figref[1]{Fig.~\ref{#1}}
+\newcommand\tableref[1]{Table~\ref{#1}}
+\newcommand\sectref[1]{Section~\ref{#1}}
+\newcommand\ieq[1]{\(#1\)}
+
+
+\newcommand\zwspace[0]{\hspace{0pt}}
+
+\makeatletter    
+\renewcommand{\maketitle}     
+{
+	{\raggedright % Note the extra {
+		\begin{center}
+		{\huge \bfseries \sffamily \@title }\\[8ex] 
+		{\large  \@author } \\[12ex]      
+		\@date
+		
+		\end{center}
+	}
+}
+\makeatother     
+
+\lstset{
+  basicstyle=\ttfamily,
+  frame=single,
+  breaklines=true,
+  aboveskip=1em,
+  belowskip=1em,
+  escapeinside={(*@}{@*)},
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+  showstringspaces=false,
+}

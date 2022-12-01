@@ -1,0 +1,7 @@
+User-agent: Googlebot
+Allow: /*/videos/
+Allow: /ajax/bootloader-endpoint/
+Allow: /ajax/pagelet/generic.php/PagePostsSectionPagelet
+Allow: /careers/
+Allow: /safetycheck/
+Allow: /watch

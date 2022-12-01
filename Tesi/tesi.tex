@@ -1,0 +1,140 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%UNIVERSITA' DEGLI STUDI DI MILANO                                           %
+%DIPARTIMENTO DI INFORMATICA                                                 %
+%TESI DI LAUREA TRIENNALE IN SICUREZZA DEI SISTEMI E DELLE RETI INFORMATICHE %
+%FRANCESCO AVANTAGGIATO MATR: 942790                                         %    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,italian]{report}
+\usepackage{tesi}
+
+
+% CORSO DI LAUREA:
+\def\myCDL{Corso di Laurea in\\Sicurezza dei Sistemi e delle Reti Informatiche\\(L-31 Scienze e Tecnologie Informatiche) }
+
+% TITOLO TESI:
+\def\myTitle{Studio e sviluppo di connettori di scraping di sorgenti\\ social network per ingestione in sistemi di Big Data Analytics}
+
+% AUTORE:
+\def\myName{Francesco Avantaggiato}
+\def\myMat{Matr. 942790}
+
+% RELATORE 
+\def\myRefereeA{Prof. Marco Anisetti}
+
+% ANNO ACCADEMICO
+\def\myYY{2021/2022}
+
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+% Package di formato
+%\usepackage[a4paper]{geometry}		% Formato del foglio
+\usepackage[italian]{babel}			% Supporto per l'italiano
+\usepackage[utf8]{inputenc}			% Supporto per UTF-8
+\usepackage[a-1b]{pdfx}			    % PDF-A (obbligatorio per la consegna)
+
+% Package per la grafica
+\usepackage{graphicx}				
+\usepackage{hologo}					
+\usepackage{svg}
+\usepackage{listingsutf8}
+\usepackage{minted}
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+\lstdefinelanguage{docker}{
+  keywords={FROM, RUN, COPY, ADD, ENTRYPOINT, CMD,  ENV, ARG, WORKDIR, EXPOSE, LABEL, USER, VOLUME, STOPSIGNAL, ONBUILD, MAINTAINER},
+  keywordstyle=\color{blue}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{\#},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+%\usepackage{epsfig}				
+%\usepackage{xcolor}				
+
+% Package tipografici
+\usepackage{amssymb,amsmath,amsthm} 
+\usepackage{listings}				
+\usepackage{caption} 
+\captionsetup[table]{skip=10pt}
+
+% Package ipertesto
+\usepackage{url}				
+\usepackage{hyperref}				
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,compat=1.9}
+\begin{document}
+
+
+
+% Creazione automatica del frontespizio
+\frontespizio
+\beforepreface
+
+
+{\raggedleft \large \sl 
+	\vspace{6cm}
+
+	
+%dedica
+	A mio Fratello
+	\bigskip
+	
+	}
+
+
+%Creazione automatica dell'indice
+\afterpreface
+%Capitolo 1: Introduzione
+\include{capitoli/capitolo1}
+\afterpage{\blankpage}
+
+%Capitolo 2: Stato dell'arte
+\include{capitoli/capitolo2}
+\afterpage{\blankpage}
+
+%Capitolo 3: Analisi concettuale
+\include{capitoli/capitolo3}
+\afterpage{\blankpage}
+
+%Capitolo 4: Caso di studio
+\include{capitoli/capitolo4}
+\afterpage{\blankpage}
+
+%Capitolo 5: Test
+\include{capitoli/capitolo5}
+\afterpage{\blankpage}
+
+%Capitolo 6: Conclusioni
+\include{capitoli/capitolo6}
+\afterpage{\blankpage}
+%APPENDICE
+\include{capitoli/appendice.tex}
+
+%BIBLIOGRAFIA
+
+\bibliographystyle{unsrt}
+\bibliography{bibliografia}
+\addcontentsline{toc}{chapter}{Bibliografia}
+\afterpage{\blankpage}
+
+%RINGRAZIAMENTI
+\prefacesection{Ringraziamenti}
+A conclusione dell'elaborato desidero ringraziare anzitutto il Prof. Marco Anisetti per avermi accolto e seguito come suo studente per lo sviluppo di questa tesi, avente come oggetto temi inerenti ai suoi campi di ricerca.
+
+Ringrazio anche il Dott. Antongiacomo Polimeno per avermi garantito una presenza costante e aiuto tecnico nello sviluppo del progetto, mettendo a disposizione la sua professionalit\`a e competenza.
+
+Infine ringrazio la mia famiglia e tutti i miei amici per il loro supporto in questi tre anni.
+% Pagina di chiusura 
+\closingpage
+
+\end{document}
+
+
+ 
